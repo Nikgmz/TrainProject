@@ -9,29 +9,12 @@ public class WindowMain extends JFrame {
         setLayout(new FlowLayout());
         setSize(500, 500);
         setTitle("Train Service App");
-
-        JLabel categoryLabel = new JLabel("Look at schedule: ");
-        String[] typeDestination = {
-            "Arriving", "Leaving"
-        };
-        JComboBox<String> category = new JComboBox<>(typeDestination);
-        JButton enter = new JButton("Enter");
-        enter.addActionListener(e -> {//tuk polzwam lambda, zashtoto warningite w intellij kazaha che bi mi
-                                        //optimiziralo koda, a te ne greshat
-            String type = (String) category.getSelectedItem();
-            assert type != null;
-            new TrainSchedule(type);
+        JButton goToSearch = new JButton("Go and search for routes!");
+        goToSearch.addActionListener(e -> {
 
         });
-        add(categoryLabel);
-        add(category);
-        add(enter);
-
-
-        JButton applyJobs;
-        JButton information;
-
-
+        JButton goApplyJob = new JButton("Go and apply for a job!");
+        JButton goSeeInfo = new JButton("Go and learn about our organisation!");
         setVisible(true);
         //pack();
     }
