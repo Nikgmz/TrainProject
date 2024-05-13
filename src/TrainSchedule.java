@@ -15,6 +15,7 @@ public class TrainSchedule extends JFrame {
         File schedule = new File(type1);
         try (Scanner scanner = new Scanner(schedule)) {
 
+
         } catch (FileNotFoundException e) {
             System.out.println("Invalid file name");
         }
