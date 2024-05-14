@@ -44,6 +44,7 @@ public class SearchWindow extends JFrame {
     public String[] getNamesStart(ArrayList<Train> trains){
 
         ArrayList<String> names = new ArrayList<>();
+        names.add("");
         for (int i = 0; i < trains.size(); i++) {
             String city = trains.get(i).getStartCity();
             for (int j = i + 1; j < trains.size(); j++) {
@@ -52,6 +53,15 @@ public class SearchWindow extends JFrame {
                     names.add(city);
                 }
             }
+        }
+        names.sort(Comparator.naturalOrder());
+        for (int i = 0; i < names.size()-1; i++) {
+            if(names.get(i).equals(names.get(i+1))){
+                names.set(i, "");
+            }
+        }
+        while(names.remove("")){
+
         }
         names.sort(Comparator.naturalOrder());
         String[] answer = new String[names.size()];//transformiram Arraylist wuw String[] zashtoto JComboBox
@@ -71,6 +81,14 @@ public class SearchWindow extends JFrame {
             }
         }
         names.sort(Comparator.naturalOrder());
+        for (int i = 0; i < names.size()-1; i++) {
+            if(names.get(i).equals(names.get(i+1))){
+                names.set(i, "");
+            }
+        }
+        while(names.remove("")){
+
+        }
         String[] answer = new String[names.size()];//transformiram Arraylist wuw String[] zashtoto JComboBox
         //ne priema ArrayListi
         answer = names.toArray(answer);
