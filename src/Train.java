@@ -1,15 +1,11 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Train {
-    private String startCity;
-    private String finishCity;
+    private final String startCity;
+    private final String finishCity;
     private double startTime;
     private double arriveTime;
     private String trainType;
     private double price;
+
 
     public Train(String startCity, String finishCity, String startTime, String arriveTime, String trainType, String price) {
         this.startCity = startCity;

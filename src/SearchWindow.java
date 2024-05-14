@@ -10,7 +10,6 @@ public class SearchWindow extends JFrame {
     public SearchWindow() throws HeadlessException {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
-        setSize(500, 500);
         setTitle("Search for Routes");
         setVisible(true);
 
@@ -35,10 +34,19 @@ public class SearchWindow extends JFrame {
         JLabel finish = new JLabel("To:");
         JComboBox<String> cityStart = new JComboBox<>(getNamesStart(trains));
         JComboBox<String> cityFinish = new JComboBox<>(getNamesFinish(trains));
+        JButton enter = new JButton("Enter");
+        enter.addActionListener(e -> {
+            String startSelectedItem = cityStart.getSelectedItem().toString();
+            String finishSelectedItem = cityStart.getSelectedItem().toString();
+            SortedWindow sortedWindow = new SortedWindow(startSelectedItem, finishSelectedItem);
+            dispose();
+        });
         add(start);
         add(cityStart);
         add(finish);
         add(cityFinish);
+        add(enter);
+        pack();
     }
 
     public String[] getNamesStart(ArrayList<Train> trains){
