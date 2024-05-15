@@ -13,7 +13,7 @@ Yambol Sliven 07:50 09:10 B 15$.
 Dupnitsa Blagoevgrad 10:45 12:05 A 17$.
 Vratsa Montana 13:10 15:00 C 28$.
 Asenovgrad Plovdiv 08:35 09:25 B 12$.
-Pazardzhik Plovdiv 09:50 11:10 A 14$.
+Asenovgrad Plovdiv 09:50 11:10 A 14$.
 Razgrad Targovishte 14:00 15:45 C 20$.
 Smolyan Plovdiv 15:30 17:30 B 29$.
 Svishtov Pleven 11:15 13:30 A 22$.

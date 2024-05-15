@@ -37,7 +37,7 @@ public class SearchWindow extends JFrame {
         JButton enter = new JButton("Enter");
         enter.addActionListener(e -> {
             String startSelectedItem = cityStart.getSelectedItem().toString();
-            String finishSelectedItem = cityStart.getSelectedItem().toString();
+            String finishSelectedItem = cityFinish.getSelectedItem().toString();
             SortedWindow sortedWindow = new SortedWindow(startSelectedItem, finishSelectedItem);
             dispose();
         });
