@@ -15,7 +15,14 @@ public class WindowMain extends JFrame {
             dispose();
         });
         add(goToSearch);
-        JButton goApplyJob = new JButton("Go and apply for a job!");
+        
+       JButton goApplyJob = new JButton("Go and apply for a job!");
+        goApplyJob.addActionListener(e->{
+            JobApplication jobApplication = new JobApplication();
+            dispose();
+        });
+        add(goApplyJob);
+        
         JButton goSeeInfo = new JButton("Go and learn about our organisation!");
         setVisible(true);
         //pack();
