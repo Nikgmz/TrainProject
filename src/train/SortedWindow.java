@@ -1,3 +1,7 @@
+package train;
+
+import main.WindowMain;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -8,8 +12,8 @@ import java.util.Scanner;
 public class SortedWindow extends JFrame {
     public SortedWindow(String start, String finish) throws HeadlessException {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new WrapLayout());
-        setSize(700, 500);
+        setLayout(new main.WrapLayout());
+        setSize(670, 500);
         setTitle("Available Routes");
         setVisible(true);
         
@@ -40,7 +44,7 @@ public class SortedWindow extends JFrame {
 
         if(!fitting.isEmpty()){
             for (String s : fitting) {
-                JLabel suitable = new JLabel();
+                JTextArea suitable = new JTextArea();
                 suitable.setText(s);
                 add(suitable);
             }
@@ -53,7 +57,12 @@ public class SortedWindow extends JFrame {
             wrong.addActionListener(e -> dispose());
             add(wrong);
         }
-
+        JButton returnBtn = new JButton("Return");
+        returnBtn.addActionListener(e -> {
+            main.WindowMain windowMain = new WindowMain();
+            dispose();
+        });
+        add(returnBtn);
         pack();
     }
 }

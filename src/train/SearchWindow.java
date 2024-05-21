@@ -1,3 +1,7 @@
+package train;
+
+import main.WindowMain;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -46,6 +50,12 @@ public class SearchWindow extends JFrame {
         add(finish);
         add(cityFinish);
         add(enter);
+        JButton returnBtn = new JButton("Return");
+        returnBtn.addActionListener(e -> {
+            main.WindowMain windowMain = new WindowMain();
+            dispose();
+        });
+        add(returnBtn);
         pack();
     }
 

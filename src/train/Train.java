@@ -1,3 +1,5 @@
+package train;
+
 public class Train {
     private final String startCity;
     private final String finishCity;
@@ -23,7 +25,7 @@ public class Train {
                 ", Arrives in: " + finishCity +
                 ", From: " + startTime +
                 ", Until: " + arriveTime +
-                ", Train type: " + trainType +
+                ", train.Train type: " + trainType +
                 ", Price: " + price;
     }
 

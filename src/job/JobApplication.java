@@ -1,3 +1,7 @@
+package job;
+
+import main.WindowMain;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,7 +17,7 @@ public class JobApplication extends JFrame {
         JTextArea fullNameTxtA = new JTextArea();
         fullNameTxtA.setEditable(true);
         fullNameTxtA.setColumns(10);
-        JLabel yearsLbl = new JLabel("Years: ");
+        JLabel yearsLbl = new JLabel("Age: ");
         JTextArea yearsTxtA = new JTextArea();
         yearsTxtA.setEditable(true);
         yearsTxtA.setColumns(10);
@@ -31,9 +35,17 @@ public class JobApplication extends JFrame {
         JButton enter = new JButton("Enter");
         enter.addActionListener(e->{
             int yearsExp = Integer.parseInt(yearsExpTxtA.getText());
-            JobFinishWindow jobFinishWindow = new JobFinishWindow(yearsExp);
+            String name = fullNameTxtA.getText();
+            int years = Integer.parseInt(yearsTxtA.getText());
+            JobFinishWindow jobFinishWindow = new JobFinishWindow(name, years, yearsExp);
             dispose();
         });
         add(enter);
+        JButton returnBtn = new JButton("Return");
+        returnBtn.addActionListener(e -> {
+            main.WindowMain windowMain = new WindowMain();
+            dispose();
+        });
+        add(returnBtn);
     }
 }
