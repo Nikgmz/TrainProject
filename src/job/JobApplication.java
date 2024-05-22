@@ -9,7 +9,7 @@ public class JobApplication extends JFrame {
     public JobApplication() throws HeadlessException {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
-        setSize(500, 500);
+        //setSize(500, 500);
         setVisible(true);
         setTitle("Job Application");
 
@@ -32,6 +32,7 @@ public class JobApplication extends JFrame {
         add(yearsTxtA);
         add(yearsExpLbl);
         add(yearsExpTxtA);
+
         JButton enter = new JButton("Enter");
         enter.addActionListener(e->{
             int yearsExp = Integer.parseInt(yearsExpTxtA.getText());
@@ -47,5 +48,6 @@ public class JobApplication extends JFrame {
             dispose();
         });
         add(returnBtn);
+        pack();
     }
 }

@@ -10,4 +10,12 @@ public class Candidate {
         this.years = years;
         this.yearsExp = yearsExp;
     }
+
+    @Override
+    public String toString() {
+        return "Candidate:" +
+                "Name: " + name +
+                " Age: " + years +
+                " Experience: " + yearsExp;
+    }
 }

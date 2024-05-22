@@ -1,6 +1,7 @@
 package train;
 
 import main.WindowMain;
+import main.WrapLayout;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +13,7 @@ import java.util.Scanner;
 public class SortedWindow extends JFrame {
     public SortedWindow(String start, String finish) throws HeadlessException {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new main.WrapLayout());
+        setLayout(new WrapLayout());
         setSize(670, 500);
         setTitle("Available Routes");
         setVisible(true);

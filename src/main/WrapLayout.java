@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
-public class WrapLayout extends FlowLayout//kopirano ot internet za cel na moite esteticheski  iskaniq
+public class WrapLayout extends FlowLayout
 {
     private Dimension preferredLayoutSize;
 
