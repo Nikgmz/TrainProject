@@ -13,7 +13,7 @@ public class WindowMain extends JFrame {//towa tuka definira klasa kato nasledni
         setDefaultCloseOperation(EXIT_ON_CLOSE);//kato se zatwori prozoreca da se exitne
         setLayout(new BorderLayout());//towa definira kak shte ni izglezhda GUI
         //setSize(500, 500);//nachalna golemina
-        setTitle("train.Train Service App");//zaglawie
+        setTitle("Train Service App");//zaglawie
 
 
 
@@ -31,8 +31,8 @@ public class WindowMain extends JFrame {//towa tuka definira klasa kato nasledni
         });
 
         
-        JButton goSeeInfo = new JButton("Go and learn about our organisation!");
-        goSeeInfo.addActionListener(e -> {
+        JButton goSeeInfo = new JButton("Go and learn about our organisation!");//kodut wuw funkciqta e za otwarqne na url
+        goSeeInfo.addActionListener(e -> {//kopiran ot stackoverflow
             Runtime rt = Runtime.getRuntime();
             String url = "https://bg.wikipedia.org/wiki/Български_държавни_железници";
             try {
@@ -40,7 +40,6 @@ public class WindowMain extends JFrame {//towa tuka definira klasa kato nasledni
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            dispose();
         });
 
         JPanel train = new JPanel();
@@ -56,7 +55,7 @@ public class WindowMain extends JFrame {//towa tuka definira klasa kato nasledni
         add(info, BorderLayout.WEST);
         image.add(new JLabel(new ImageIcon("bdzh.png")));
         add(image, BorderLayout.PAGE_END);
-        setVisible(true);
+        setVisible(true);//estetichekso podrezhdane sprqmo wuzmozhnostite na layouta
         pack();
     }
 }

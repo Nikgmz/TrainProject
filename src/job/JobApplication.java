@@ -9,13 +9,12 @@ public class JobApplication extends JFrame {
     public JobApplication() throws HeadlessException {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
-        //setSize(500, 500);
         setVisible(true);
         setTitle("Job Application");
 
-        JLabel fullNameLbl = new JLabel("Full Name: ");
+        JLabel fullNameLbl = new JLabel("Full Name: ");//poleta za wuwezhdane na danni
         JTextArea fullNameTxtA = new JTextArea();
-        fullNameTxtA.setEditable(true);
+        fullNameTxtA.setEditable(true);//mozhe da se pishe w tqh
         fullNameTxtA.setColumns(10);
         JLabel yearsLbl = new JLabel("Age: ");
         JTextArea yearsTxtA = new JTextArea();
@@ -33,11 +32,11 @@ public class JobApplication extends JFrame {
         add(yearsExpLbl);
         add(yearsExpTxtA);
 
-        JButton enter = new JButton("Enter");
+        JButton enter = new JButton("Enter");//butoni enter, return i openAll
         enter.addActionListener(e->{
-            int yearsExp = Integer.parseInt(yearsExpTxtA.getText());
+            double yearsExp = Double.parseDouble(yearsExpTxtA.getText());
             String name = fullNameTxtA.getText();
-            int years = Integer.parseInt(yearsTxtA.getText());
+            double years = Double.parseDouble(yearsTxtA.getText());
             JobFinishWindow jobFinishWindow = new JobFinishWindow(name, years, yearsExp);
             dispose();
         });
@@ -47,7 +46,14 @@ public class JobApplication extends JFrame {
             main.WindowMain windowMain = new WindowMain();
             dispose();
         });
+
         add(returnBtn);
-        pack();
+        JButton openAll = new JButton("Open a list of all passing candidates");
+        openAll.addActionListener(e -> {
+            PassingWindow passingWindow = new PassingWindow();
+            dispose();
+        });
+        add(openAll);
+        pack();//smestwa wsichkite elementi
     }
 }

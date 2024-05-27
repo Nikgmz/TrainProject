@@ -1,11 +1,11 @@
-package job;
+package job; //adres kum papkata job
 
 public class Candidate {
     String name;
-    int years;
-    int yearsExp;
+    double years;
+    double yearsExp;
 
-    public Candidate(String name, int years, int yearsExp) {
+    public Candidate(String name, double years, double yearsExp) {
         this.name = name;
         this.years = years;
         this.yearsExp = yearsExp;

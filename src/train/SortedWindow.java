@@ -21,7 +21,7 @@ public class SortedWindow extends JFrame {
         File file = new File("schedule.txt");
         ArrayList<Train> trains = new ArrayList<>();
         try (Scanner scanner = new Scanner(file)) {
-            while(scanner.hasNext()){
+            while(scanner.hasNext()){//chetem dannite ot texta
                 String cityStart = scanner.next();
                 String cityFinish = scanner.next();
                 String timeStart = scanner.next();
@@ -37,7 +37,7 @@ public class SortedWindow extends JFrame {
 
         ArrayList<String> fitting = new ArrayList<>();
         for (Train train : trains) {
-            if (train.getStartCity().equals(start) &&
+            if (train.getStartCity().equals(start) &&//dali dannite suwpadat
                     train.getfinishCity().equals(finish)) {
                 fitting.add(train.toString());
             }

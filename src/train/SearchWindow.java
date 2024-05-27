@@ -20,7 +20,7 @@ public class SearchWindow extends JFrame {
         File file = new File("schedule.txt");
         ArrayList<Train> trains = new ArrayList<>();
         try (Scanner scanner = new Scanner(file)) {
-            while(scanner.hasNext()){
+            while(scanner.hasNext()){//wzimma dannite ot fila
                 String cityStart = scanner.next();
                 String cityFinish = scanner.next();
                 String timeStart = scanner.next();
@@ -36,7 +36,7 @@ public class SearchWindow extends JFrame {
 
         JLabel start = new JLabel("From:");
         JLabel finish = new JLabel("To:");
-        JComboBox<String> cityStart = new JComboBox<>(getNamesStart(trains));
+        JComboBox<String> cityStart = new JComboBox<>(getNamesStart(trains));//padashto menu s gradowe
         JComboBox<String> cityFinish = new JComboBox<>(getNamesFinish(trains));
         JButton enter = new JButton("Enter");
         enter.addActionListener(e -> {
